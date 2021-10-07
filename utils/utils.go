@@ -9,14 +9,17 @@ import(
     "os"
 )
 
-
 func Formatasname(p string)string{
     p = strings.TrimSuffix(p, filepath.Ext(p))
     return fmt.Sprintf(p)
 
 }
 func Getchrononames()(names []string){
-    files, err := ioutil.ReadDir("./markdown/")
+    path,err := os.Getwd()
+    if err !=nil{
+        fmt.Println(err)
+    }
+    files, err := ioutil.ReadDir(path+"/markdown/")
     if err != nil{
         fmt.Println(err)
     }
@@ -48,7 +51,12 @@ func Getchrononames()(names []string){
 }*/
 
 func Formatasdate(name string)(string){
-    file, err := os.Stat("./markdown/"+name)
+    path,err := os.Getwd()
+    if err !=nil{
+        fmt.Println(err)
+    }
+
+    file, err := os.Stat(path+"/markdown/"+name)
     if err != nil{
         fmt.Println(err)
     }

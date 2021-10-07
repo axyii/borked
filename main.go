@@ -6,6 +6,7 @@ import (
     "github.com/gamingbeast36/borked/utils"
     "io/ioutil"
 //    "log"
+    "os"
     "net/http"
     "github.com/gin-contrib/static"
     "github.com/gin-gonic/gin"
@@ -18,7 +19,10 @@ type Post struct {
 }
 
 func main() {
-    gin.SetMode(gin.ReleaseMode)
+    path,err := os.Getwd()
+    if err != nil{
+        fmt.Println(err)
+    }
     r := gin.Default()
     r.Use(gin.Logger())
     r.Delims("{{", "}}")
@@ -26,8 +30,8 @@ func main() {
         "formatname": utils.Formatasname,
         "formatdate": utils.Formatasdate,
     })
-    r.Use(static.Serve("/assets", static.LocalFile("./assets", false)))
-    r.LoadHTMLGlob("./templates/*.tmpl.html")
+    r.Use(static.Serve("/assets", static.LocalFile(path +"/assets", false)))
+    r.LoadHTMLGlob(path +"/templates/*.tmpl.html")
 
     r.GET("/", func(c *gin.Context) {
         var posts []string
@@ -41,7 +45,7 @@ func main() {
 
     r.GET("/articles/:postName", func(c *gin.Context) {
         postName := c.Param("postName")
-        mdfile, err := ioutil.ReadFile("./markdown/" + postName)
+        mdfile, err := ioutil.ReadFile(path +"/markdown/" + postName)
         fmt.Println(postName)
         // if the file can not be found
         if err != nil {
