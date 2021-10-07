@@ -1,0 +1,12 @@
+[Unit]
+Description=goweb
+[Service]
+WorkingDirectory=/home/ubuntu/borked
+Type=simple
+Restart=always
+RestartSec=5s
+Environment=PORT=80
+Environment=GIN_MODE=release
+ExecStart=/home/ubuntu/borked/main
+[Install]
+WantedBy=multi-user.target
