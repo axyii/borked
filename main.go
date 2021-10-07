@@ -18,7 +18,7 @@ type Post struct {
 }
 
 func main() {
-
+    gin.SetMode(gin.ReleaseMode)
     r := gin.Default()
     r.Use(gin.Logger())
     r.Delims("{{", "}}")
