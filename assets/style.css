@@ -1,0 +1,105 @@
+body {
+    background-color: #282828;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: #458588;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    color: #d79921;
+    text-shadow: 2px 2px black;
+
+}
+
+h3 {
+    color: #98971a;
+    text-shadow: 2px 2px black;
+}
+
+h4 {
+    color: #d65d0e;
+    text-shadow: 2px 2px black;
+}
+
+p {
+    color: #bdae93;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+blockquote {
+    color: #a89984;
+}
+
+li {
+    color: #b16286;
+}
+
+hr {
+    border-color: #cc241d;
+
+}
+
+a {
+    color: #689d6a;
+    /* text-shadow: 2px 2px black; */
+}
+
+ul.head {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.head {
+    float: left; 
+}
+
+a.head {
+    display: block;
+    padding: 8px;
+    color: #1d2021;
+    background-color: #83a598;
+    text-decoration: none;
+    border: 10px;
+}
+
+code.crypto {
+	background: #222;
+	color: lime;
+	border-radius: 5px;
+}
+
+
+.dropcontent{
+	position: absolute;
+	display: none;
+	color: #1d2021;
+	background-color: #83a598;
+	z-index: 1;
+}
+
+.dropcontent a {
+    display: block;
+    padding: 8px;
+    color: #1d2021;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropcontent{
+   display:block
+}
+
+.panel {
+	background-color: #5C595D;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #353436;
+}

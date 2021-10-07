@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Borked</title>
+</head>
+<body>
+    <h1>Here are all my articles</h1>
+    <hr>
+  <div class="container">
+    <ul>
+      {{ range .posts }}
+      <li>{{. | formatdate}} - <a href="/articles/{{ . }}">{{ . | formatname}}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</body>
+</html>

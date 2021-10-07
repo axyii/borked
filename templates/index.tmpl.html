@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Borked</title>
+</head>
+<body>
+    <h1>BORKED</h1>
+    <hr>
+    <h2>What is this about?</h2>
+    <p>I write about all kinds of stuff that interests me.This website is not ugly it's minimal and functional. Here is my <a href="https://www.instagram.com/___tanush_/">Instagram</a> which i generally don't use and my <a href="https://github.com/gamingbeast36/">Github</a>.Finally, you might be thinking why it is called "BORKED", it is called that because I write about my encounters borking stuff apart from my other interests. Here is a list of all my <a href="/articles/">Articles</a>.
+    </p>
+    <div class="container">
+      <h2>Here are a few of my latest blogs</h2>
+    <ul>
+      {{ range .posts }}
+      <li><a href="/articles/{{ . }}">{{ . | formatname}}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</body>
+</html>
