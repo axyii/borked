@@ -9,22 +9,27 @@ body {
 h1 {
     color: #458588;
     text-shadow: 2px 2px black;
+    margin-left: 10px;
+
 }
 
 h2 {
     color: #d79921;
     text-shadow: 2px 2px black;
+    margin-left: 10px;
 
 }
 
 h3 {
     color: #98971a;
     text-shadow: 2px 2px black;
+    margin-left: 10px;
 }
 
 h4 {
     color: #d65d0e;
     text-shadow: 2px 2px black;
+    margin-left: 10px;
 }
 
 p {
@@ -43,12 +48,18 @@ li {
 
 hr {
     border-color: #cc241d;
+    margin-left: 5px;
+    margin-right: 5px;
 
 }
 
 a {
     color: #689d6a;
     /* text-shadow: 2px 2px black; */
+}
+
+a:hover {
+    color: lightblue;
 }
 
 ul.head {
