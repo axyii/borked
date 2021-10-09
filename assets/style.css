@@ -10,6 +10,7 @@ h1 {
     color: #458588;
     text-shadow: 2px 2px black;
     margin-left: 10px;
+    margin-right:10px;
 
 }
 
@@ -17,19 +18,21 @@ h2 {
     color: #d79921;
     text-shadow: 2px 2px black;
     margin-left: 10px;
-
+    margin-right:10px;
 }
 
 h3 {
     color: #98971a;
     text-shadow: 2px 2px black;
     margin-left: 10px;
+    margin-right:10px;
 }
 
 h4 {
     color: #d65d0e;
     text-shadow: 2px 2px black;
     margin-left: 10px;
+    margin-right:10px;
 }
 
 p {
