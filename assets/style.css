@@ -85,12 +85,21 @@ a.head {
     border: 10px;
 }
 
-code.crypto {
-	background: #222;
-	color: lime;
-	border-radius: 5px;
+code {
+	color: #83a598;
+	border-radius: 5px ;
 }
 
+pre {
+	background: #111222 ;
+	border: 1px solid #83a598;
+	border-radius: 20px ;
+	padding: 1em ;
+	white-space: pre-wrap;
+	overflow-wrap: break-word ;
+	max-width: 600px ;
+	margin: auto ;
+}
 
 .dropcontent{
 	position: absolute;
