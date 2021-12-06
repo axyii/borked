@@ -4,13 +4,11 @@ import (
     "fmt"
     "html/template"
     "github.com/gamingbeast36/borked/utils"
-    "io/ioutil"
-//    "log"
     "os"
     "net/http"
+    "github.com/gin-contrib/gzip"
     "github.com/gin-contrib/static"
     "github.com/gin-gonic/gin"
-    "github.com/russross/blackfriday"
 )
 
 type Post struct {
@@ -19,11 +17,13 @@ type Post struct {
 }
 
 func main() {
+    utils.Genpages()
     path,err := os.Getwd()
     if err != nil{
         fmt.Println(err)
     }
     r := gin.Default()
+    r.Use(gzip.Gzip(gzip.DefaultCompression))
     r.Use(gin.Logger())
     r.Delims("{{", "}}")
     r.SetFuncMap(template.FuncMap{
@@ -45,15 +45,13 @@ func main() {
 
     r.GET("/articles/:postName", func(c *gin.Context) {
         postName := c.Param("postName")
-        mdfile, err := ioutil.ReadFile(path +"/markdown/" + postName)
-        fmt.Println(postName)
-        // if the file can not be found
+        htmlfile, err := os.ReadFile(path +"/articles/" + postName)
         if err != nil {
             fmt.Println(err)
             c.HTML(http.StatusNotFound, "error.tmpl.html", nil)
             return
         }
-        postHTML := template.HTML(blackfriday.MarkdownCommon([]byte(mdfile)))
+        postHTML := template.HTML(htmlfile)
         postit := utils.Formatasname(postName) 
 
         post := Post{Title: postit, Content: postHTML}
