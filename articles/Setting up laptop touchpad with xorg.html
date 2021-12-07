@@ -1,0 +1,22 @@
+<h1>Setting up laptop touchpad with xorg</h1>
+
+<hr />
+
+<p>If you want to setup your laptop&rsquo;s touchpad through xorg here is the process:</p>
+
+<p>Install libinput with your package manager:</p>
+
+<pre><code>sudo pacman -S libinput
+</code></pre>
+
+<p>Add the following to /etc/X11/xorg.conf.d/30-touchpad.conf</p>
+
+<pre><code>Section &quot;InputClass&quot;
+    Identifier &quot;touchpad&quot;
+   	    Driver &quot;libinput&quot;
+    MatchIsTouchpad &quot;on&quot;
+    Option &quot;tapping&quot; &quot;on&quot;
+    Option &quot;AccelProfile&quot; &quot;adaptive&quot;
+    Option &quot;TappingButtonMap&quot; &quot;lrm&quot;
+EndSection
+</code></pre>

@@ -1,4 +1,4 @@
-[//]: # (17-10-2021)
+[//]: # (2021-10-17)
 # Setting up laptop touchpad with xorg
 
 

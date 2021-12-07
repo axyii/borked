@@ -1,7 +1,6 @@
 package main
 
 import (
-    "fmt"
     "html/template"
     "github.com/gamingbeast36/borked/utils"
     "os"
@@ -20,9 +19,10 @@ func main() {
     utils.Genpages()
     path,err := os.Getwd()
     if err != nil{
-        fmt.Println(err)
+        utils.Logger.Println(err)
     }
     r := gin.Default()
+    r.Use(utils.Default())
     r.Use(gzip.Gzip(gzip.DefaultCompression))
     r.Use(gin.Logger())
     r.Delims("{{", "}}")
@@ -47,7 +47,7 @@ func main() {
         postName := c.Param("postName")
         htmlfile, err := os.ReadFile(path +"/articles/" + postName)
         if err != nil {
-            fmt.Println(err)
+            utils.Logger.Println(err)
             c.HTML(http.StatusNotFound, "error.tmpl.html", nil)
             return
         }
