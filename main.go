@@ -17,6 +17,7 @@ type Post struct {
 
 func main() {
     utils.Genpages()
+    allposts := utils.Getchrononames()
     path,err := os.Getwd()
     if err != nil{
         utils.Logger.Println(err)
@@ -35,8 +36,7 @@ func main() {
 
     r.GET("/", func(c *gin.Context) {
         var posts []string
-        posts = utils.Getchrononames()
-        posts = posts[:2]
+        posts = allposts[:2]
 
         c.HTML(http.StatusOK, "index.tmpl.html", gin.H{
             "posts": posts,
@@ -63,9 +63,8 @@ func main() {
     })
     r.GET("/articles", func(c *gin.Context){
 
-        posts := utils.Getchrononames()
         c.HTML(http.StatusOK, "articles.tmpl.html", gin.H{
-            "posts": posts,
+            "posts": allposts,
         })
     })
     r.NoRoute(func(c *gin.Context) {
