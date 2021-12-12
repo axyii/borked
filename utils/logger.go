@@ -6,10 +6,8 @@ import (
 	"os"
 )
 
-// GeneralLogger exported
+//Logger is exported
 var Logger *log.Logger
-
-// ErrorLogger exported
 
 func init() {
 
