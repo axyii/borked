@@ -1,6 +1,7 @@
 body {
     background-color: #282828;
     font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    font-size:14px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
