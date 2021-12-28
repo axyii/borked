@@ -2,7 +2,7 @@ package main
 
 import (
     "html/template"
-    "github.com/gamingbeast36/borked/utils"
+    "github.com/unixchad/borked/utils"
     "os"
     "net/http"
     "github.com/gin-contrib/gzip"
