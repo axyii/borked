@@ -1,6 +1,21 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/assets/fonts/JetBrainsMono-Light.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("/assets/fonts/JetBrainsMono-Bold.woff2") format('woff2'); 
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
     background-color: #282828;
-    font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+    font-family:"JetBrains Mono";
     font-size:14px;
     max-width: 800px;
     margin-left: auto;
