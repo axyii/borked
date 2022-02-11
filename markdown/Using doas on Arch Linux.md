@@ -2,8 +2,6 @@
 
 # Using doas on Arch Linux
 
----
-
 I recently uninstalled 'sudo' and started using 'doas': a utility used to assume the identity of another user. It's just like sudo but easier to manage and very simple to use. I would not recommend using it in systems where highly refined user permissions are required, but if you have a single user box or a desktop, I would say you are good to go. One of the major reasons I switched to is because it's wayy smaller and minimal than sudo.So, let's get started on setting it up
 
 

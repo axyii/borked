@@ -1,7 +1,6 @@
 [//]: # (2021-10-09)
-# Why I fell in love with ZFS
 
----
+# Why I fell in love with ZFS
 
 A couple of days ago, I downloaded the ISO image for FreeBSD and decided to ditch my Windows installation. While partitioning the disks, I noticed a new filesystem called ZFS. Being into technology, I kinda knew what it was-I just thought it was another filesystem like ext4. Oh boy! Was I wrong?
 

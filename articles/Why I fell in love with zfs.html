@@ -1,7 +1,5 @@
 <h1>Why I fell in love with ZFS</h1>
 
-<hr />
-
 <p>A couple of days ago, I downloaded the ISO image for FreeBSD and decided to ditch my Windows installation. While partitioning the disks, I noticed a new filesystem called ZFS. Being into technology, I kinda knew what it was-I just thought it was another filesystem like ext4. Oh boy! Was I wrong?</p>
 
 <p>ZFS is a whole new level. It has all the features I wish I had. ZFS handles disks and drives in a different way than ext4. It has pooled storage which completely eliminates the use of volume managers when handling multiple drives (vdevs). This filesystem has another interesting feature, which is its ability to handle redundancy, so even if a drive goes haywire, you still have the ability to access your data. Note that redundancy is not present on stripes(obviously). It also has features like quota where you can set limits on the size of each dataset present in a zpool. The main feature (my personal favorite) of this filesystem is that it can take snapshots of datasets. These snapshots are read-only files which can then be backed up to another place using rsync. Even if I mess up my installation while loading a custom kernel module, I can simply restore to the previous snapshots.Alas!</p>

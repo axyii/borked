@@ -1,8 +1,6 @@
 [//]: # (2021-10-07)
+
 # The music I listen to
-
-
----
 
 Over the past few months, I started listening to a lot of EDM, and I started to delve deeper into the rabbit hole. I discovered many sub-genres of EDM, but my favourite one Dubstep. I am writing this in order to list out the new artists I found during my journey and also to help you find new music and artists.
 
