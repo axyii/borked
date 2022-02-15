@@ -2,7 +2,7 @@ package main
 
 import (
     "html/template"
-    "github.com/unixchad/borked/utils"
+    "github.com/axyii/borked/utils"
     "os"
     "net/http"
     "github.com/gin-contrib/gzip"
