@@ -8,7 +8,7 @@ echo "----------"
 STAGED_GO_FILES=$(git diff --cached --name-only -- '*.go')
 
 if [ -z "$STAGED_GO_FILES" ];then 
-        echo "No Go Files to Update"; 
+        echo "No Go Files to be formatted"; 
 else
  for file in $STAGED_GO_FILES; do
         go fmt "$file";
